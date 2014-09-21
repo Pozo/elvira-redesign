@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="iso-8859-2">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Elvira</title>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-loader.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-resource.js"></script>
+
+    <script src="js/angular-strap-2.1.0/angular-strap.min.js"></script>
+    <script src="js/angular-strap-2.1.0/angular-strap.tpl.min.js"></script>
+
+    <link rel="stylesheet" href="css/elvira.css">
+    <link rel="stylesheet" href="css/date.picker.fix.css">
+
+    <script type="text/javascript" src="js/fixBackground.js"></script>
+    <script type="text/javascript" src="http://elvira.mav-start.hu/elvira.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/mainService.js"></script>
+    <script type="text/javascript" src="js/mainController.js"></script>
+</head>
+
+<body ng-app="main">
+    <img id="page-background-img" src="background.jpg">
+
+    <div id="content" ng-controller="MainCtrl">
+        <form class="form-inline request-form" role="form">
+
+            <div class="input-group input-group-lg">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-map-marker">A</span>
+                    </span>
+                <!-- HONNAN -->
+                <input type="text" id="from" class="form-control" ng-options="city for city in cities" ng-model="fromCity"
+                       placeholder="Honnan" autofocus autocomplete="off" bs-typeahead>
+            </div>
+
+            <div class="input-group input-group-lg">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-map-marker">B</span>
+                    </span>
+                <!-- HOVA -->
+                <input type="text" id="to" class="form-control" ng-options="city for city in cities" ng-model="toCity"
+                       placeholder="Hova" autocomplete="off" bs-typeahead>
+            </div>
+
+            <div class="input-group input-group-lg aligh-right">
+                   <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-th"></i>
+                  </span>
+                <!-- MIKOR -->
+                <input type="text" class="form-control date-input" ng-model="selectedDate" name="date" bs-datepicker autoclose="true">
+            </div>
+        </form>
+        <form class="form-inline request-form" role="form">
+
+            <!-- SUBMIT-->
+            <div class="input-group input-group-lg aligh-right">
+                <div class="btn-group">
+                    <!--select title="Kedvezmény" type="button" class="selectpicker" ng-model="selected" data-ng-options="discount as discount.name group by discount.group for discount in discounts | orderBy:['group','name']" bs-select>
+                        <option value="">Kedvezmény</option></select-->
+                    <button type="button" class="btn btn-default btn-lg" ng-model="discount" data-ng-options="discount as discount.name group by discount.group for discount in discounts | orderBy:['group','name']" bs-select placeholder="Kedvezmény">
+                    </button>
+                    <button id="submit-search" type="button" class="btn btn-primary btn-lg" ng-click="submit()">
+                        <span class="glyphicon glyphicon-search"></span> Keresés
+                    </button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

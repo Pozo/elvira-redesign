@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#page-background-img {
+    position: fixed;
+}
+
+#content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 65em;
+    top: 15em;
+    position: relative;
+    transform: translateY(-50%);
+}
+
+.request-form {
+    width: inherit;
+    float: left;
+    padding: 0 2em 2em 2em;
+}
+
+.city-input {
+    width: 30em;
+}
+
+.date-input {
+    width: 7em !important;
+}
+
+#submit-input {
+    width: 15em;
+}
+.aligh-right {
+    float: right;
+}
+.justify-right {
+    padding-left: 2em;
+}
