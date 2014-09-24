@@ -1,0 +1,70 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Elvira</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.min.css" />
+        <link rel="stylesheet" href="bower_components/bootstrap-select/dist/css/bootstrap-select.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="styles/elvira.css">
+        <link rel="stylesheet" href="styles/date.picker.fix.css">
+        <link rel="stylesheet" href="styles/bootstrap-responsive.min.css">
+        <!-- endbuild -->
+
+    </head>
+    <body ng-app="main">
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <img id="page-background-img" src="images/background.jpg">
+
+        <div ng-view=""></div>
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-strap/dist/angular-strap.min.js"></script>
+        <script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+        <script src="bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/bootstrap/js/affix.js"></script>
+        <script src="bower_components/bootstrap/js/alert.js"></script>
+        <script src="bower_components/bootstrap/js/dropdown.js"></script>
+        <script src="bower_components/bootstrap/js/tooltip.js"></script>
+        <script src="bower_components/bootstrap/js/modal.js"></script>
+        <script src="bower_components/bootstrap/js/transition.js"></script>
+        <script src="bower_components/bootstrap/js/button.js"></script>
+        <script src="bower_components/bootstrap/js/popover.js"></script>
+        <script src="bower_components/bootstrap/js/carousel.js"></script>
+        <script src="bower_components/bootstrap/js/scrollspy.js"></script>
+        <script src="bower_components/bootstrap/js/collapse.js"></script>
+        <script src="bower_components/bootstrap/js/tab.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script type="text/javascript" src="http://elvira.mav-start.hu/elvira.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/mainService.js"></script>
+        <script src="scripts/mainController.js"></script>
+        <script src="scripts/fixBackground.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

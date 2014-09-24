@@ -1,0 +1,15 @@
+{
+  "name": "elvira-redesign",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "jquery": "~1.11.0",
+    "angular": "~1.2.25",
+    "angular-strap": "~2.1.0",
+    "bootstrap-select": "~1.6.2",
+    "angular-i18n": "~1.2.25",
+    "angular-route": "~1.2.25",
+    "angular-resource": "~1.2.25"
+  },
+  "devDependencies": {}
+}
