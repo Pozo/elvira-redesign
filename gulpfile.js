@@ -5,6 +5,7 @@ var gulp = require('gulp');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
+var condition = '!./**/discounts.js';
 
 gulp.task('styles', function () {
     return gulp.src('app/styles/main.css')
@@ -14,7 +15,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('scripts', function () {
-    return gulp.src('app/scripts/**/*.js')
+    return gulp.src(['app/scripts/**/*.js', condition])
         .pipe($.jshint())
         .pipe($.jshint.reporter(require('jshint-stylish')))
         .pipe($.size());
