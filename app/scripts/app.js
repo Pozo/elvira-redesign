@@ -14,7 +14,7 @@ angular.module('main',
             .when('/', {
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl',
-                controllerAs: 'main'
+                controllerAs: 'mainCtrl'
             })
             .otherwise({
                 redirectTo: '/'
