@@ -1,3 +1,5 @@
+'use strict';
+
 var fixBackground = function(){
     var backgroundImage = document.getElementById('page-background-img');
     if(window.innerHeight >= backgroundImage.height) {
