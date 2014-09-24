@@ -3,26 +3,23 @@
 angular.module('main')
     .controller('MainCtrl', ['$scope', '$resource', '$datepicker', '$q', 'mainService',
         function ($scope, $resource, $datepicker, $q, mainService) {
-            $scope.selectedDate = new Date();
-            $scope.fromCity;
-            $scope.toCity;
-            $scope.discount;
+            this.selectedDate = new Date();
 
-            $scope.cities = mav;
+            this.cities = mav;
 
-            $scope.discounts = [
+            this.discounts = [
                 { group : '50%os',id : 1, name: 'asd' },
                 { group : '50%os',id : 2, name: 'bbb' },
                 { group : '90%os',id : 2, name: 'ccc' }
             ];
 
-            $scope.messages;
-            $scope.deferred = $q.defer();
+//            this.messages;
+            this.deferred = $q.defer();
 
-            $scope.submit = function () {
-                console.log($scope.fromCity);
-                console.log($scope.toCity);
-                console.log($scope.cities);
+            this.submit = function () {
+                console.log(this.fromCity);
+                console.log(this.toCity);
+                console.log(this.cities);
             };
             mainService.getMessages({from: 'Budapest', to: 'Gyor'}).then(function (data) {
                 /*console.log(data);
