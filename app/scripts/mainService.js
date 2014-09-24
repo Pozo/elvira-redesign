@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('main')
     .service('mainService', ['$resource',function ($resource) {
         var apiURL = 'http://apiv2.oroszi.net/elvira';

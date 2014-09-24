@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('main')
     .controller('MainCtrl', ['$scope', '$resource', '$datepicker', '$q', 'mainService',
         function ($scope, $resource, $datepicker, $q, mainService) {
@@ -21,7 +23,7 @@ angular.module('main')
                 console.log($scope.fromCity);
                 console.log($scope.toCity);
                 console.log($scope.cities);
-            }
+            };
             mainService.getMessages({from: 'Budapest', to: 'Gyor'}).then(function (data) {
                 /*console.log(data);
                  $scope.deferred.resolve($scope.messages = data); //was: $defer.resolve($scope.messages = data.result);
