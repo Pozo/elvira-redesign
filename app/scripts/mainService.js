@@ -1,17 +1,23 @@
 'use strict';
 
 angular.module('main')
-    .service('mainService', ['$resource',function ($resource) {
-        var apiURL = 'http://apiv2.oroszi.net/elvira';
-        var api = $resource(apiURL);
-        console.dir(api);
-        return {
-            getMessages: function (params) {
-                var get = api.get(params, function (data) {
-                    return data;
+    .service('MainService', ['$http', 'MainServiceConfig', '$q', '$log',
+        function ($http, MainServiceConfig, $q, $log) {
+
+            this.getMessages = function (params) {
+                var deferResult = $q.defer();
+                $http({
+                    method: 'GET',
+                    url: MainServiceConfig.apiURL,
+                    params: params
+                }).success(function (data) {
+                    deferResult.resolve(data);
+                }).error(function (data, status) {
+                    $log.error('Couldn\'t fetch data: '+status);
+                    $log.debug(data);
+                    deferResult.reject(status);
                 });
-                return get.$promise;
-            }
-        };
-    }]
+                return deferResult.promise;
+            };
+        }]
 );
