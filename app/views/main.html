@@ -34,9 +34,9 @@
             <div class="btn-group">
                 <!--select title="Kedvezmény" type="button" class="selectpicker" ng-model="selected" data-ng-options="discount as discount.name group by discount.group for discount in discounts | orderBy:['group','name']" bs-select>
                     <option value="">Kedvezmény</option></select-->
-                <button type="button" class="btn btn-default btn-lg" ng-model="discount" data-ng-options="discount as discount.name group by discount.group for discount in discounts | orderBy:['group','name']" bs-select placeholder="Kedvezmény">
+                <button type="button" class="btn btn-default btn-lg" ng-model="discount" data-ng-options="discount as discount.name group by discount.group for discount in mainCtrl.discounts | orderBy:['group','name']" bs-select placeholder="Kedvezmény">
                 </button>
-                <button id="submit-search" type="button" class="btn btn-primary btn-lg" ng-click="mainCtrl.submit()">
+                <button id="submit-search" type="button" class="btn btn-primary btn-lg" ng-click="mainCtrl.submit(mainCtrl.fromCity, mainCtrl.toCity)">
                     <span class="glyphicon glyphicon-search"></span> Keresés
                 </button>
             </div>
