@@ -4,6 +4,7 @@ angular.module('main')
 .controller('MainCtrl', ['$scope', 'MainService',
     function ($scope, MainService) {
 
+        this.showActions= false;
         this.selectedDate = new Date();
 
         this.cities = mav;
