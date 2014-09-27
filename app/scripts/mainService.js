@@ -12,7 +12,7 @@ angular.module('main')
         var p = MainService.prototype;
         p.constructor = MainService;
 
-        p.getMessages = function (params) {
+        p.getTimetable = function (params) {
             var deferResult = $q.defer();
             $http({
                 method: 'GET',

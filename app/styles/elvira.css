@@ -8,14 +8,15 @@ body {
 }
 
 #content {
+    width: 65em;
     margin-left: auto;
     margin-right: auto;
-    width: 65em;
-    top: 15em;
+}
+#search-form {
     position: relative;
+    top: 15em;
     transform: translateY(-50%);
 }
-
 .request-form {
     width: inherit;
     float: left;
@@ -38,4 +39,111 @@ body {
 }
 .justify-right {
     padding-left: 2em;
+}
+
+
+#result-table {
+    float: left;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+}
+.result-table-panel-title {
+
+}
+.result-table-panel-difference-time {
+
+}
+#result-table-time-table {
+    padding-left: 1em;
+}
+#result-table-time-table span {
+    vertical-align: middle;
+}
+.result-table-panel-time {
+    font-size: 2em;
+    font-weight: bold;
+}
+#result-table-location-table {
+    font-size: large;
+    padding-left: 2em;
+    vertical-align: middle;
+}
+.result-table-panel-start {
+
+}
+.result-table-panel-destination {
+
+}
+.result-table-panel-title-right {
+    width: 10em;
+    float: right;
+}
+.result-table-panel-title-right-content {
+    width: 10em;
+    text-align: center;
+}
+.result-table-panel-price-1st {
+    font-size: large;
+    font-weight: bold;
+}
+.result-table-panel-price-2nd {
+    font-weight: bold;
+}
+#map_canvas {
+    width: 100%;
+    height: 400px;
+}
+.panel-group .panel + .panel {
+    margin-top: -1px !important;
+    border-radius: 0px !important;
+}
+.panel-heading {
+    cursor: pointer;
+}
+.panel-heading:hover {
+    background-color: #c0c0c0;
+    color: #fefefe;
+}
+.panel-heading {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+.panel-group {
+    margin-bottom: 0px !important;
+}
+
+
+.sample-show-hide {
+    /*
+    margin: 2em;
+    padding: 2em;
+    border:1px solid black;
+    background:white;
+    */
+}
+.sample-show-hide.ng-hide-add {
+    -webkit-transition:all linear 0.0s;
+    -moz-transition:all linear 0.0s;
+    -o-transition:all linear 0.0s;
+    transition:all linear 0.0s;
+    display:block!important;
+}
+
+.sample-show-hide.ng-hide-remove {
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    display:block!important;
+}
+
+.sample-show-hide.ng-hide-add.ng-hide-add-active,
+.sample-show-hide.ng-hide-remove {
+    opacity:0;
+}
+.sample-show-hide.ng-hide-add,
+.sample-show-hide.ng-hide-remove.ng-hide-remove-active {
+    opacity:1;
+
 }

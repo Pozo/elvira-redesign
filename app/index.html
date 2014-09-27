@@ -23,7 +23,7 @@
         <!-- endbuild -->
 
     </head>
-    <body ng-app="main">
+    <body ng-app="main" ng-swipe-left="showActions = true" ng-swipe-right="showActions = false">
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -41,6 +41,7 @@
         <script src="bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
         <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="/bower_components/angular-touch/angular-touch.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 

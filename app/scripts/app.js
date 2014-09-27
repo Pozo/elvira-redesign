@@ -1,6 +1,8 @@
 'use strict';
 angular.module('main',
     [
+        'ngTouch',
+        'ngAnimate',
         'ngRoute',
         'ngResource',
         'mgcrea.ngStrap'
