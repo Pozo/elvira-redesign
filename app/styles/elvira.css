@@ -39,3 +39,40 @@ body {
 .justify-right {
     padding-left: 2em;
 }
+
+
+.result-table {
+    float: left;
+    width: 100%;
+
+    background-color: #fff;
+}
+.result-table-panel-title {
+
+}
+.result-table-panel-difference-time {
+
+}
+#result-table-time-table span {
+    vertical-align: middle;
+}
+.result-table-panel-time {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.result-table-panel-start {
+
+}
+.result-table-panel-destination {
+
+}
+
+
+.result-table-panel-title-right {
+    width: 10em;
+    float: right;
+}
+.result-table-panel-title-right-content {
+    width: 10em;
+}

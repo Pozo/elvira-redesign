@@ -7,19 +7,19 @@ angular.module('main')
         this.selectedDate = new Date();
 
         this.cities = mav;
-        this.messages = {};
+        this.timeTable = {};
 
         this.discounts = [
             { group : '50%os',id : 1, name: 'asd' },
             { group : '50%os',id : 2, name: 'bbb' },
             { group : '90%os',id : 2, name: 'ccc' }
         ];
-
+        var that = this;
         this.submit = function (from, to) {
             var that = this;
-            MainService.getMessages({from: from, to: to}).then(function (data) {
+            MainService.getTimetable({from: from, to: to}).then(function (data) {
                 console.log(data);
-                that.messages = data;
+                that.result = data;
             }, function (error) {
                 console.log(error);
             });
@@ -27,14 +27,13 @@ angular.module('main')
 //            console.log(this.toCity);
 //            console.log(this.cities);
         };
-
-        MainService.getMessages({from: 'Budapest', to: 'Gyor'}).then(function (data) {
-            /*console.log(data);
-             $scope.deferred.resolve($scope.messages = data); //was: $defer.resolve($scope.messages = data.result);
-             */
+        MainService.getTimetable({from: 'Budapest', to: 'Gyor'}).then(function (data) {
             console.log(data);
+            that.result = data;
         }, function (error) {
             console.log(error);
         });
+
+        this.activePanel;
     }]
 );

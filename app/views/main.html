@@ -11,7 +11,7 @@
         </div>
 
         <div class="input-group input-group-lg">
-                    <span class="input-group-addon">
+            <span class="input-group-addon">
                         <span class="glyphicon glyphicon-map-marker">B</span>
                     </span>
             <!-- HOVA -->
@@ -24,7 +24,7 @@
                     <i class="glyphicon glyphicon-th"></i>
                   </span>
             <!-- MIKOR -->
-            <input type="text" class="form-control date-input" ng-model="selectedDate" name="date" bs-datepicker autoclose="true">
+            <input type="text" class="form-control date-input" ng-model="mainCtrl.selectedDate" name="date" bs-datepicker autoclose="true">
         </div>
     </form>
     <form class="form-inline request-form" role="form">
@@ -42,5 +42,31 @@
             </div>
         </div>
 
+        <div class="result-table">
+            <div class="panel-group" ng-model="mainCtrl.panels.activePanel" bs-collapse>
+                <div class="panel panel-default" ng-repeat="schedule in mainCtrl.result.timetable">
+                    <div class="panel-heading" bs-collapse-toggle>
+                        <span class="result-table-panel-title">
+                            <span id="result-table-time-table">
+                                <span class="result-table-panel-time">{{ schedule.starttime }}</span>
+                                <span class="result-table-panel-difference-time">{{ schedule.totaltime }}</span>
+                                <span class="result-table-panel-time">{{ schedule.destinationtime }}</span>
+                            </span>
+                            <span class="result-table-panel-start">{{ schedule.start }}</span>
+                            <span class="result-table-panel-destination">{{ schedule.destination }}</span>
+                        </span>
+                        <span class="result-table-panel-title-right">
+                            <span class="result-table-panel-title-right-content">{{ schedule.cost1st }}</span>
+                            <span class="result-table-panel-title-right-content">{{ schedule.cost2nd }}</span>
+                        </span>
+                    </div>
+                    <div class="panel-collapse" bs-collapse-target>
+                        <div class="panel-body">
+                            {{ schedule.body }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </form>
 </div>
