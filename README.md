@@ -3,6 +3,13 @@ elvira-redesign
 
 elvira.hu ujragondolasa
 
+### Preparations on Ubuntu
+
+    sudo apt-get install npm
+    sudo apt-get install nodejs-legacy
+    sudo npm install -g bower
+    sudo npm install -g gulp
+
 ### Development
 
     npm install
