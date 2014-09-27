@@ -4,10 +4,15 @@ angular.module('main',
         'ngRoute',
         'ngResource',
         'mgcrea.ngStrap'
-    ]).config(['$datepickerProvider','$routeProvider',function ($datepickerProvider, $routeProvider) {
+    ]).config(['$datepickerProvider', '$typeaheadProvider', '$routeProvider',function ($datepickerProvider, $typeaheadProvider, $routeProvider) {
         angular.extend($datepickerProvider.defaults, {
             dateFormat: 'yyyy.MM.dd.',
             startWeek: 1
+        });
+
+        angular.extend($typeaheadProvider.defaults, {
+            minLength: 2,
+            limit: 6
         });
 
         $routeProvider
