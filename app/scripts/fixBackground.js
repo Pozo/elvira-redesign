@@ -11,5 +11,6 @@ var fixBackground = function(){
         backgroundImage.style.height = null;
     }
 };
+document.getElementById('page-background-img').ondragstart = function() { return false; };
 window.onresize = fixBackground;
 window.onload = fixBackground;
