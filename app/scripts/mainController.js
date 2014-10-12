@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('main')
-.controller('MainCtrl', ['$scope', 'MainService',
-    function ($scope, MainService) {
+.controller('MainCtrl', ['$scope', 'MainService','logger',
+    function ($scope, MainService, logger) {
 
         this.showActions= false;
         this.selectedDate = new Date();
@@ -19,22 +19,22 @@ angular.module('main')
         this.submit = function (from, to) {
             var that = this;
             MainService.getTimetable({from: from, to: to}).then(function (data) {
-                console.log(data);
+                logger.logSuccess('Data retrieved!', data, null, true);
                 that.result = data;
             }, function (error) {
-                console.log(error);
+                logger.logError('Error getting data', error, null, true);
             });
 //            console.log(this.fromCity);
 //            console.log(this.toCity);
 //            console.log(this.cities);
         };
         MainService.getTimetable({from: 'Budapest', to: 'Gyor'}).then(function (data) {
-            console.log(data);
+            logger.logSuccess('Data retrieved!', data, null, true);
             that.result = data;
         }, function (error) {
-            console.log(error);
+            logger.logError('Error getting data', error, null, true);
         });
 
-        this.activePanel;
+//        this.activePanel;
     }]
 );

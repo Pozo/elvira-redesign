@@ -2,7 +2,7 @@
 
 angular.module('main')
 .service('MainService', ['$http', 'MainServiceConfig', '$q', '$log',
-    function ($http, MainServiceConfig, $q, $log) {
+    function ($http, MainServiceConfig, $q) {
 
         /**
          * @constructor
@@ -21,8 +21,6 @@ angular.module('main')
             }).success(function (data) {
                 deferResult.resolve(data);
             }).error(function (data, status) {
-                $log.error('Couldn\'t fetch data: '+status);
-                $log.debug(data);
                 deferResult.reject(status);
             });
             return deferResult.promise;

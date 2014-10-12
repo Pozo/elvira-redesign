@@ -11,7 +11,8 @@
     "angular-route": "~1.2.25",
     "angular-resource": "~1.2.25",
     "angular-touch": "~1.2.25",
-    "angular-carousel": "~0.2.5"
+    "angular-carousel": "~0.2.5",
+    "toastr": "~2.0.3"
   },
   "devDependencies": {}
 }

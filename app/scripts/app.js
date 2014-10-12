@@ -6,7 +6,8 @@ angular.module('main',
         'ngRoute',
         'ngResource',
         'mgcrea.ngStrap',
-        'angular-carousel'
+        'angular-carousel',
+        'common'
     ]).config(['$datepickerProvider', '$typeaheadProvider', '$routeProvider',function ($datepickerProvider, $typeaheadProvider, $routeProvider) {
         angular.extend($datepickerProvider.defaults, {
             dateFormat: 'yyyy.MM.dd.',
