@@ -1,0 +1,51 @@
+<div id="search-form">
+    <form class="form-inline request-form" role="form">
+
+        <div class="input-group input-group-m">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-map-marker">A</span>
+                    </span>
+            <!-- HONNAN -->
+            <input type="text" id="from" class="form-control" ng-options="city for city in mainCtrl.cities"
+                   ng-model="mainCtrl.fromCity"
+                   placeholder="Honnan" autofocus="off" autocomplete="off" bs-typeahead>
+        </div>
+
+        <div class="input-group input-group-m">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-map-marker">B</span>
+                    </span>
+            <!-- HOVA -->
+            <input type="text" id="to" class="form-control" ng-options="city for city in mainCtrl.cities"
+                   ng-model="mainCtrl.toCity"
+                   placeholder="Hova" autofocus="off" autocomplete="off" bs-typeahead>
+        </div>
+
+        <div class="input-group input-group-m aligh-right">
+                   <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-th"></i>
+                  </span>
+            <!-- MIKOR -->
+            <input type="text" class="form-control date-input" ng-model="mainCtrl.selectedDate" name="date"
+                   bs-datepicker autoclose="true">
+        </div>
+    </form>
+    <form class="form-inline request-form" role="form">
+
+        <!-- SUBMIT-->
+        <div class="input-group input-group-m aligh-right">
+            <div class="btn-group">
+                <!--select title="Kedvezmény" type="button" class="selectpicker" ng-model="selected" data-ng-options="discount as discount.name group by discount.group for discount in discounts | orderBy:['group','name']" bs-select>
+                    <option value="">Kedvezmény</option></select-->
+                <button type="button" class="btn btn-default btn-m" ng-model="discount"
+                        data-ng-options="discount as discount.name group by discount.group for discount in mainCtrl.discounts | orderBy:['group','name']"
+                        bs-select placeholder="Kedvezmény">
+                </button>
+                <button id="submit-search" type="button" class="btn btn-primary btn-m"
+                        ng-click="mainCtrl.submit(mainCtrl.fromCity, mainCtrl.toCity)">
+                    <span class="glyphicon glyphicon-search"></span> Keresés
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

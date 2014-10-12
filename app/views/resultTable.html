@@ -1,0 +1,82 @@
+<div >
+    <div class="panel-heading">{{ mainCtrl.result.route }} {{ mainCtrl.result.date }}</div>
+
+    <div class="panel-group" ng-model="mainCtrl.panels.activePanel" bs-collapse>
+        <div class="panel panel-default" ng-repeat="schedule in mainCtrl.result.timetable">
+            <div class="panel-heading" bs-collapse-toggle>
+                    <span class="result-table-panel-title">
+                        <span id="result-table-time-table">
+                            <span class="result-table-panel-time">{{ schedule.starttime }}</span>
+                            <span class="result-table-panel-difference-time"> - {{ schedule.totaltime }} - </span>
+                            <span class="result-table-panel-time">{{ schedule.destinationtime }}</span>
+                        </span>
+                        <span id="result-table-location-table">
+                            <span class="result-table-panel-start">{{ schedule.start }}</span>
+                            <span class="result-table-panel-destination">{{ schedule.destination }}</span>
+                        </span>
+                    </span>
+                    <span class="result-table-panel-title-right">
+                        <table class="result-table-panel-title-right-content">
+                            <tr>
+                                <td>
+                                    <span ng-show="schedule.cost1st">1st</span>
+                                </td>
+                                <td>
+                                    <span ng-show="schedule.cost1st" class="result-table-panel-price-1st">{{ schedule.cost1st }}</span>
+                                </td>
+                                <td rowspan="2">
+                                    <img ng-show="schedule.ticketinfo" src="images/ic_action_new_label.png">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2nd</td>
+                                <td class="result-table-panel-price-2nd">{{ schedule.cost2nd }}</td>
+                            </tr>
+                        </table>
+                    </span>
+            </div>
+            <div class="panel-collapse" bs-collapse-target>
+                <div class="panel-body">
+                    <table>
+                        <tr ng-repeat="detail in schedule.details">
+                            <td>{{ detail.from }}</td>
+                            <td>{{ detail.dep }}</td>
+                            <td>{{ detail.dep_real }}</td>
+                        </tr>
+                        <ul ng-repeat="service in detail.services">
+                            <li>{{ service.code }}</li>
+                        </ul>
+                    </table>
+                </div>
+                <!--
+                <div id="map_canvas"></div>
+                <script>
+                    function initialize() {
+                        var map_canvas = document.getElementById('map_canvas');
+                        var map_options = {
+                            center: new google.maps.LatLng(47.668090, 19.076631),
+                            zoom: 15,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP,
+                            disableDefaultUI: true,
+                            scrollwheel: false,
+                            navigationControl: false,
+                            mapTypeControl: false,
+                            scaleControl: false,
+                            draggable: false
+                        }
+                        var map = new google.maps.Map(map_canvas, map_options);
+                        var marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(47.668090, 19.076631),
+                            map: map,
+                            title: 'Hello World!'
+                        });
+                    }
+                    initialize();
+                    //google.maps.event.addDomListener(window, 'load', initialize);
+
+                </script>
+                -->
+            </div>
+        </div>
+    </div>
+</div>
