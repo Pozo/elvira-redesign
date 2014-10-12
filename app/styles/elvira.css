@@ -8,14 +8,17 @@ body {
 }
 
 #content {
-    width: 65em;
+    max-width: 50em;
     margin-left: auto;
     margin-right: auto;
 }
 #search-form {
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+
     position: relative;
     top: 15em;
-    transform: translateY(-50%);
 }
 .request-form {
     width: inherit;
@@ -37,9 +40,11 @@ body {
 .aligh-right {
     float: right;
 }
+/*
 .justify-right {
     padding-left: 2em;
 }
+*/
 
 
 #result-table {
@@ -69,6 +74,7 @@ body {
     padding-left: 2em;
     vertical-align: middle;
 }
+
 .result-table-panel-start {
 
 }
@@ -112,38 +118,7 @@ body {
 .panel-group {
     margin-bottom: 0px !important;
 }
-
-
-.sample-show-hide {
-    /*
-    margin: 2em;
-    padding: 2em;
-    border:1px solid black;
-    background:white;
-    */
-}
-.sample-show-hide.ng-hide-add {
-    -webkit-transition:all linear 0.0s;
-    -moz-transition:all linear 0.0s;
-    -o-transition:all linear 0.0s;
-    transition:all linear 0.0s;
-    display:block!important;
-}
-
-.sample-show-hide.ng-hide-remove {
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    display:block!important;
-}
-
-.sample-show-hide.ng-hide-add.ng-hide-add-active,
-.sample-show-hide.ng-hide-remove {
-    opacity:0;
-}
-.sample-show-hide.ng-hide-add,
-.sample-show-hide.ng-hide-remove.ng-hide-remove-active {
-    opacity:1;
-
+.rn-carousel-container {
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
 }
