@@ -10,7 +10,8 @@
     "angular-i18n": "~1.2.25",
     "angular-route": "~1.2.25",
     "angular-resource": "~1.2.25",
-    "angular-touch": "~1.2.25"
+    "angular-touch": "~1.2.25",
+    "angular-carousel": "~0.2.5"
   },
   "devDependencies": {}
 }
