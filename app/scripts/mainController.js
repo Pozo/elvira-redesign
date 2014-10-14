@@ -19,7 +19,7 @@ angular.module('main')
         this.submit = function (from, to) {
             var that = this;
             MainService.getTimetable({from: from, to: to}).then(function (data) {
-                logger.logSuccess('Data retrieved!', data, null, true);
+                logger.logSuccess('Data received!', data, null, true);
                 that.result = data;
             }, function (error) {
                 logger.logError('Error getting data', error, null, true);
@@ -29,7 +29,7 @@ angular.module('main')
 //            console.log(this.cities);
         };
         MainService.getTimetable({from: 'Budapest', to: 'Gyor'}).then(function (data) {
-            logger.logSuccess('Data retrieved!', data, null, true);
+            logger.logSuccess('Data received!', data, null, true);
             that.result = data;
         }, function (error) {
             logger.logError('Error getting data', error, null, true);
